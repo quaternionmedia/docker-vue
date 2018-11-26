@@ -1,5 +1,6 @@
 FROM node:alpine
-RUN npm i -g @vue/cli
-RUN chown -R node:node /usr/local/lib/node_modules/
+RUN npm install -g @vue/cli
+RUN mkdir /code
+WORKDIR /code
 
 ENTRYPOINT ["sh"]
